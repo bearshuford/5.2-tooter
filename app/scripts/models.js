@@ -5,7 +5,7 @@ function Post(){
 }
 
 Post.fetch = function(){
-  var promise = $.ajax('http://tiny-lasagna-server.herokuapp.com/collections/posts');
+  var promise = $.ajax('https://tiny-lasagna-server.herokuapp.com/collections/posts');
 
   promise.then(function(posts){
     $(document).trigger('posts:fetched', [posts]);
